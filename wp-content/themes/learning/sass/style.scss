@@ -4,8 +4,13 @@ Author: John
 version:1.0
 */
 
+
+
+$primary: #81FFC0;
+$black: #303030;
+
 body {
-	background: #D8E2E6;
+	background-color: $primary;
 	font-family: helvetica, sans-serif;
 	font-size: 14px;
 }
@@ -38,11 +43,80 @@ article.post {
 article.post:last-of-type {
 	border-bottom: none;
 }
+
+
+/* Aside Styles */
+article.post-aside,
+article.post-link {
+	font-size: 1.3em;
+	background-color: #FFF5CB;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px rgba(0,0,0, 0.1);
+}
+
+.mini-meta {
+	font-size: 0.7em;
+	color: #B2B2B2;
+	margin-bottom: -15spx;
+}
+
+/* Link Post Format styles */
+
+article.post-link {
+	padding: 0;
+	background:#A6D9E4;
+}
+
+article.post-link a {
+	display: block;
+	padding: 20px;
+}
+
+/* Post Format Gallery styles */
+
+article.post-gallery {
+	background-color: #303030;
+	color: white;
+	padding: 20px;
+
+	h2{
+		text-align: center;
+	}
+	img {
+		border: none!important;
+	}
+}
+
 /*header*/
 
 .site-header {
 	border-bottom: 2px solid #87ABB0;
 }
+
+/* Main Column */
+
+.main-column {
+	width: 66%;
+	float: left;
+}
+
+/* Secondary Column */
+
+.secondary-column {
+	width: 30%;
+	float: right;
+}
+
+/* footer widget area */
+
+.footer-widget-area {
+	width: 25%;
+	float: left;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
 
 /*footer*/
 .site-footer {
@@ -243,15 +317,48 @@ p.post-info a:visited {
 	float: left;
 }
 
+/* Search style */
+div.hd-search {
+	float: right;
+
+	label {
+		
+	} 
+	#searchsubmit {
+		background: darken($primary, 30%);
+		color: #565656;
+		padding: 5px 14px;
+		border: none;
+		vertical-align: top;
+	}
+	#s {
+		vertical-align: top;
+		padding: 5px;
+	}
+}
+
+
+
+/* Front page splash */
 .splash img {
 	position: static;
 	float:right;
 
-	width: 30%;
+	width: 40%;
 	height: auto;
 }
+
+.overlay {
+
+height: 50vh;
+background: blue;
+}
+
+
 
 .front-article {
 	clear: both;
 }
 
+
+@import "partials/media-query";

@@ -10,7 +10,10 @@
 	<div class="container">
 	<!-- site-header -->
 	<header class="site-header">
-			<nav class="site-nav" role="navigation">
+		<div class="hd-search">
+			<?php get_search_form(); ?>
+		</div>
+		<nav class="site-nav" role="navigation">
 			<?php 
 				$args = array('theme_location' => 'primary');
 			?>

@@ -1,13 +1,14 @@
 <?php get_header(); ?>
 <?php
-
 if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 	<article class="front-pg">
 		<h2><?php the_title(); ?></h2>
 		<!-- post-thumbnail -->
-		<div class="splash">
-			<?php the_post_thumbnail('splash-image'); ?>
+		<div class="overlay">
+			<div class="splash">
+				<?php the_post_thumbnail('splash-image'); ?>
+			</div>
 		</div>
 		
 

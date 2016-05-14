@@ -4,7 +4,7 @@ Author: John
 version:1.0
 */
 body {
-  background: #D8E2E6;
+  background-color: #81FFC0;
   font-family: helvetica, sans-serif;
   font-size: 14px; }
 
@@ -29,9 +29,59 @@ article.post {
 article.post:last-of-type {
   border-bottom: none; }
 
+/* Aside Styles */
+article.post-aside,
+article.post-link {
+  font-size: 1.3em;
+  background-color: #FFF5CB;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); }
+
+.mini-meta {
+  font-size: 0.7em;
+  color: #B2B2B2;
+  margin-bottom: -15spx; }
+
+/* Link Post Format styles */
+article.post-link {
+  padding: 0;
+  background: #A6D9E4; }
+
+article.post-link a {
+  display: block;
+  padding: 20px; }
+
+/* Post Format Gallery styles */
+article.post-gallery {
+  background-color: #303030;
+  color: white;
+  padding: 20px; }
+  article.post-gallery h2 {
+    text-align: center; }
+  article.post-gallery img {
+    border: none !important; }
+
 /*header*/
 .site-header {
   border-bottom: 2px solid #87ABB0; }
+
+/* Main Column */
+.main-column {
+  width: 66%;
+  float: left; }
+
+/* Secondary Column */
+.secondary-column {
+  width: 30%;
+  float: right; }
+
+/* footer widget area */
+.footer-widget-area {
+  width: 25%;
+  float: left;
+  padding-right: 40px;
+  box-sizing: border-box; }
 
 /*footer*/
 .site-footer {
@@ -189,11 +239,29 @@ p.post-info a:visited {
   display: inline-block;
   float: left; }
 
+/* Search style */
+div.hd-search {
+  float: right; }
+  div.hd-search #searchsubmit {
+    background: #00e774;
+    color: #565656;
+    padding: 5px 14px;
+    border: none;
+    vertical-align: top; }
+  div.hd-search #s {
+    vertical-align: top;
+    padding: 5px; }
+
+/* Front page splash */
 .splash img {
   position: static;
   float: right;
-  width: 30%;
+  width: 40%;
   height: auto; }
+
+.overlay {
+  height: 50vh;
+  background: blue; }
 
 .front-article {
   clear: both; }
@@ -210,7 +278,37 @@ p.post-info a:visited {
   .splash img {
     position: static;
     float: right;
+    width: 50%;
+    height: auto; } }
+
+@media only screen and (max-width: 480px) {
+  body {
+    background-color: pink; }
+  .front-pg h2 {
+    position: relative;
+    font-size: 2em;
+    margin-top: 10%;
+    display: inline-block;
+    float: left; }
+  .splash img {
+    position: static;
+    float: right;
     width: 70%;
+    height: auto; } }
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: lightblue; }
+  .front-pg h2 {
+    position: relative;
+    font-size: 2em;
+    margin-top: 10%;
+    display: inline-block;
+    float: left; }
+  .splash img {
+    position: static;
+    float: right;
+    width: 50%;
     height: auto; } }
 
 @media only screen and (max-width: 480px) {

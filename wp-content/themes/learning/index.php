@@ -9,8 +9,9 @@
 			get_template_part('content', get_post_format());
 			
 
-			endwhile; 
+			endwhile;?>
 
+<?php
 			else:
 		?>
 			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>

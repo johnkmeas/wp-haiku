@@ -6,23 +6,34 @@
 	<title><?php bloginfo('name'); ?></title>
 	<?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
-	<div class="container">
+<body <?php body_class(); ?> data-spy="scroll" data-target=".nav-wrapper" data-offset="100">
+
+
 	<!-- site-header -->
 	<header class="site-header">
-		<div class="hd-search">
+		<!-- <div class="hd-search"> 
 			<?php get_search_form(); ?>
-		</div>
-		<nav class="site-nav" role="navigation">
+		</div>-->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper z-depth-3">
+      <a href="#!" class="brand-logo"><img src='<?php echo esc_url( get_theme_mod( 'learning_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="logo-header responsive-img" id="image-test"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+  			<?php 
+				$args = array('theme_location' => 'primary');
+			?>
+			<?php wp_nav_menu( $args ); ?>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
 			<?php 
 				$args = array('theme_location' => 'primary');
 			?>
 			<?php wp_nav_menu( $args ); ?>
-		</nav>
-		<h1><a href="<?php echo home_url();?>"><?php bloginfo('name');?></a></h1>
-		<h5><?php bloginfo('description');?><?php if(is_page('about')) {?>
-			-Thank you for visiting
-		<?php }?></h5>
-
-	</header>
+      </ul>
+    </div>
+  </nav>
+</div>		 
+</header>
+		<div class="container">
 	

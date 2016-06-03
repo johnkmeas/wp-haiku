@@ -1,0 +1,81 @@
+article.post {
+	border-bottom: 2px dotted pink;
+}
+article.post:last-of-type {
+	border-bottom: none;
+}
+
+
+/* Aside Styles */
+article.post-aside,
+article.post-link {
+	font-size: 1.3em;
+	background-color: #FFF5CB;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 3px 3px 3px rgba(0,0,0, 0.1);
+}
+
+.mini-meta {
+	font-size: 0.7em;
+	color: #B2B2B2;
+	margin-bottom: -15spx;
+}
+
+/* Link Post Format styles */
+
+article.post-link {
+	padding: 0;
+	background:#A6D9E4;
+}
+
+article.post-link a {
+	display: block;
+	padding: 20px;
+}
+
+/* Post Format Gallery styles */
+
+article.post-gallery {
+	background-color: #303030;
+	color: white;
+	padding: 20px;
+
+	h2{
+		text-align: center;
+	}
+	img {
+		border: none!important;
+	}
+}
+
+/*Post Style*/
+.post h2 {
+	margin-bottom: 0;
+}
+
+p.post-info {
+	font-size: 87%;
+	color: #999;
+}
+
+p.post-info a:link,
+p.post-info a:visited {
+	color: #999;
+}
+
+
+/* Post columns */
+.home-columns {
+	padding-top: 30%;
+}
+.one-half {
+	width: 45%;
+	float: left;
+	margin-right: 10%;
+
+}
+
+.last {
+	margin-right: 0;
+}

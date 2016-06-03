@@ -1,0 +1,29 @@
+/* Main Column */
+
+.main-column {
+	width: 66%;
+	float: left;
+}
+
+/* Secondary Column */
+
+.secondary-column {
+	width: 30%;
+	float: right;
+}
+
+/* footer widget area */
+
+.footer-widget-area {
+	width: 25%;
+	float: left;
+	padding-right: 40px;
+	box-sizing: border-box;
+}
+
+
+/*footer*/
+.site-footer {
+	margin-top: 100px;
+	border-top: 2px solid #87ABB0;
+}

@@ -45,3 +45,17 @@ add_action( 'wp_enqueue_scripts', 'prefix_enqueue_scripts' );
 function prefix_enqueue_scripts() {
 	wp_enqueue_script( 'genesis-responsive-menu', get_stylesheet_directory_uri() . '/lib/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true ); // Change 'prefix' to your theme's prefix
 }
+
+//* Register widget areas
+genesis_register_sidebar( array(
+	'id'          	=> 'sales-cta-overlay',
+	'name'       	  => __( 'Sales Page CTA', 'cegg' ),
+	'description'	  => __( 'Widgets placed here will appear on top of sales page background image.', 'cegg' ),
+) );
+
+function be_remove_genesis_page_templates( $page_templates ) {
+	unset( $page_templates['page_archive.php'] );
+	unset( $page_templates['page_blog.php'] );
+	return $page_templates;
+}
+add_filter( 'theme_page_templates', 'be_remove_genesis_page_templates' );

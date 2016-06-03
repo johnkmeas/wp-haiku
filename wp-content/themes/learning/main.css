@@ -1,0 +1,260 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+.logo-main {
+  margin-top: 100px; }
+
+p {
+  line-height: 2rem; }
+
+.button-collapse {
+  color: white; }
+
+.row .col {
+  padding: 0.75rem; }
+
+.hero-absolute {
+  position: absolute;
+  z-index: -100;
+  min-width: 100%; }
+
+.front-copy {
+  margin-top: 10%; }
+
+.front-area {
+  width: 100%; }
+
+.front-pg {
+  width: 80%; }
+
+.splash {
+  width: 100%;
+  height: auto; }
+
+.brand-logo img.responsive-img {
+  margin: 5px 20px 0 20px; }
+
+.appear {
+  animation-name: appear; }
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+  max-width: 25%; }
+
+.nav-wrapper {
+  background-color: #202020; }
+
+nav ul a {
+  color: white; }
+
+.page-item-52 a, .page-item-54 a {
+  color: white; }
+
+.front-area {
+  margin-top: 5%;
+  width: 100%;
+  margin-bottom: 10%; }
+
+.front-copy-title {
+  padding-top: 5%; }
+
+.front-pg {
+  width: 80%; }
+
+.service-area {
+  margin-top: 5%; }
+
+.page-id-14 {
+  background: none; }
+
+input#s {
+  background: white; }
+
+.input-field .row .col.s6 {
+  width: 300px; }
+
+.results {
+  margin-top: 5%; }
+
+footer.page-footer {
+  background: black; }
+
+footer.widget-title {
+  color: white; }
+
+.widgettitle {
+  padding: 20px;
+  color: white; }
+
+.widget ul li a {
+  color: white; }
+
+@keyframes appear {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0; }
+  100% {
+    transform: translateY(0px);
+    opacity: 1; } }
+
+@media only screen and (max-width: 992px) {
+  #crop {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+  .hero-absolute {
+    position: absolute;
+    z-index: -100;
+    min-width: 150%;
+    min-height: auto; } }
+
+@media only screen and (max-width: 600px) {
+  #crop {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; }
+  .hero-absolute {
+    position: absolute;
+    z-index: -100;
+    min-width: 220%;
+    min-height: auto;
+    transform: translate(-25%); }
+  .service-widget {
+    margin-top: 5%; }
+  #index-banner .section {
+    top: 0; } }
+
+.icon-block {
+  padding: 0 15px; }
+
+.icon-block .material-icons {
+  font-size: inherit; }
+
+.hiding {
+  visibility: hidden; }
+
+.showing {
+  visibility: visible; }
+
+/* Animations */
+@keyframes title {
+  from {
+    opacity: 0;
+    transform: scale(0.8); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+.title-fade {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  animation-name: title;
+  animation-duration: 3s; }
+
+@keyframes titleCopy {
+  from {
+    opacity: 0;
+    transform: translate(0px, 50px); }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px); } }
+
+.title-fade2 {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  animation-name: titleCopy;
+  animation-duration: 2s; }
+
+@keyframes widgetSlide {
+  from {
+    opacity: 0;
+    transform: translate(-75px, 0px); }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px); } }
+
+.title-fade3 {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  animation-name: widgetSlide;
+  animation-duration: 1s; }
+
+@keyframes heroSlide {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+.hero-absolute {
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  animation-name: heroSlide;
+  animation-duration: 2s; }
+
+.magictime {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s; }
+
+.page-item-52 a, .page-item-54 a {
+  color: white; }
+
+footer.page-footer {
+  background: black; }
+
+footer.widget-title {
+  color: white; }
+
+
+.front-area {
+  margin-top: 5%;
+  width: 100%;
+  margin-bottom: 10%; }
+
+.front-copy-title {
+  padding-top: 5%; }
+
+.front-pg {
+  width: 80%; }
+
+.service-area {
+  margin-top: 5%; }
+
+.page-id-14 {
+  background: none; }
+
+input#s {
+  background: white; }
+
+.input-field .row .col.s6 {
+  width: 300px; }
+
+.results {
+  margin-top: 5%; }
+
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+  max-width: 25%; }
+
+.nav-wrapper {
+  background-color: #202020; }
+
+nav ul a {
+  color: white; }
+
+.widgettitle {
+  padding: 20px;
+  color: white; }
+
+.widget ul li a {
+  color: white; }

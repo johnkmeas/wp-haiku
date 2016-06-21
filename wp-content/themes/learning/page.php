@@ -5,32 +5,31 @@
 <?php
 
 if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
+<div class="container">
+<h2 class=""><?php the_title(); ?></h2>
 <article class="post page">
 	<?php
-		if ( has_children() OR $post->post_parent > 0 ) {?>
+		if ( has_children() OR $post->post_parent > 0 ) { ?>
+      
+	 <ul id="dropdown2" class="dropdown-content">	
+		<li><a class="about-link" href="<?php echo get_the_permalink(get_top_ancestor_id()); ?>"><?php echo get_the_title(get_top_ancestor_id());?></a></li>
 
-		<h4 class="parent-link">
-		<a class="waves-effect waves-light btn" href="<?php echo get_the_permalink(get_top_ancestor_id()); ?>"><?php echo get_the_title(get_top_ancestor_id());?></a>
 
-		
-		</h4>
-		<ul>
+				<?php 
+				$args = array(
+					'child_of' => get_top_ancestor_id(),
+					'title_li' => ''
 
-			<?php 
-			$args = array(
-				'child_of' => get_top_ancestor_id(),
-				'title_li' => ''
+				);
+				?>
+				<?php wp_list_pages($args); ?>
 
-			);
-			?>
-			<?php wp_list_pages($args); ?>
-		</ul>
-	
+			</ul>
+	  <a class="btn dropdown-button" href="#!" data-activates="dropdown2">More+<i class="mdi-navigation-arrow-drop-down right"></i></a>
+     
+  
 	<?php } ?>
-	
 
-	<h2><?php the_title(); ?></h2>
 	<?php the_content(); ?>
 
 </article><!-- container -->
@@ -39,5 +38,5 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
 		<?php endif; ?>
 
-
+</div>
 <?php get_footer(); ?>

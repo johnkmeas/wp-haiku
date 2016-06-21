@@ -1,3 +1,57 @@
 .page-item-52 a, .page-item-54 a {
 	color: white;
 }
+.page-item-52 a:hover, .page-item-54 a:hover {
+	color: white;
+	background: none;
+}
+
+ul.dropdown-content {
+	background-color: lighten($surf, 5%);	
+
+}
+ul.dropdown-content{
+	min-width: 300px;
+}
+
+.btn {
+	background: lighten($orange, 5%);
+}
+
+a.about-link:hover {
+	background: none;
+} 
+
+
+.page-item-52, .page-item-54 {
+background-color: transparent;
+box-shadow: none;
+
+
+
+}
+
+.page-item-52:hover, .page-item-54:hover {
+	background-color: $orange;
+}
+
+
+#download-button {
+border: 4px solid $reddish;
+	background-color : transparent;
+}
+
+.pagination {
+  background: $surf;
+  word-spacing: 1em;
+  font-size: 1.2em;
+  color: $blue;
+}
+
+.wpcf7-submit {
+	@extend .btn;
+}
+
+.mc-embedded-subscribe {
+	float: right;
+}

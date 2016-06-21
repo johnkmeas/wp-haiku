@@ -3,9 +3,9 @@
 function learning_resources() {
 	//https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet
 
-
 	wp_enqueue_style( 'icons', '//fonts.googleapis.com/icon?family=Material+Icons', array(), '4.0.3' );
-		wp_enqueue_style( 'iconsa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', array(), '4.0.3' );
+	wp_enqueue_style( 'merri-font', 'https://fonts.googleapis.com/css?family=Merriweather' );
+	wp_enqueue_style( 'iconsa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', array(), '4.0.3' );
 	//wp_enqueue_style('style', get_stylesheet_uri());
 	wp_enqueue_style( 'style', 
 		get_stylesheet_uri()  );
@@ -14,11 +14,13 @@ function learning_resources() {
 }
 
 add_action('wp_enqueue_scripts', 'learning_resources');
+
 function material_resources(){
 
-wp_enqueue_script( 'script', get_template_directory_uri() . '/js/jquery-2.2.4.min.js', array ( 'jquery' ), 1.1, true);
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/jquery-2.2.4.min.js', array ( 'jquery' ), 1.1, true);
 
-		wp_enqueue_script( 'materialize', get_template_directory_uri() . '/js/materialize.min.js', array( 'script' ), '1.0.0', true );
+	wp_enqueue_script( 'materialize', get_template_directory_uri() . '/js/materialize.min.js', array( 'script' ), '1.0.0', true );
+
 }
 add_action('wp_enqueue_scripts', 'material_resources');
 
@@ -29,7 +31,7 @@ function get_top_ancestor_id() {
 	$class = "";
 	if ($post -> post_parent) {
 		$ancestors = array_reverse(get_post_ancestors($post -> ID));
-
+		
 		return $ancestors[0];
 	}
 	
@@ -46,7 +48,7 @@ function has_children() {
 
 // Customize excerpt word count
 function custom_excerpt_length() {
-	return 30;
+	return 50;
 }
 
 add_filter('excerpt_length', 'custom_excerpt_length');
@@ -64,6 +66,7 @@ function learningWordpress_setup(){
 	add_theme_support('post-thumbnails');
 	add_image_size('small-thumbnail', 180, 120, true);
 	add_image_size('icon-thumbnail', 200, 200, true);
+	add_image_size('action-thumbnail', 300, 200, true);
 	add_image_size('banner-image', 920, 210, array('left', 'top'));
 	add_image_size('splash-image', 920, 700, array('left', 'top'));
 
@@ -79,11 +82,19 @@ function ourWidgetInit() {
 	register_sidebar( array(
 		'name' => 'Sidebar',
 		'id' => 'sidebar1',
-		'before_widget' => '<div class="widget-item blue lighten-3">',
+		'before_widget' => '<div class="widget-item center">',
 		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
+		'before_title' => '<h3 class="widget-title center">',
 		'after_title' => '</h3>'
 	));
+	register_sidebar( array(
+		'name' => 'Sidebar 2',
+		'id' => 'sidebar2',
+		'before_widget' => '<div class="newsletter row widget-item center"><div class="col s12 m6 offset-m3">',
+		'after_widget' => '</div></div>',
+		'before_title' => '<h3 class="widget-title center">',
+		'after_title' => '</h3>'
+	));	
 	register_sidebar( array(
 		'name' => 'Footer Area 1',
 		'id' => 'footer1'
@@ -120,7 +131,7 @@ function customizerTheme( $wp_customize) {
 			'transport' => 'refresh',
 	));	
 	$wp_customize->add_setting('body_color', array(
-			'default' => '#EBEBEB',
+			'default' => '#FCFCFC',
 			'transport' => 'refresh',
 	));				
 
@@ -249,7 +260,7 @@ add_filter("widget_categories_args","exclude_widget_categories");
 
 function remove_my_categories( $wp_query ) {
   // 61 = Daily Tweets, 74 = Testing
-  $remove_cat = '-10';
+  $remove_cat = '-10, -26';
  
   // remove from archives (except category archives), feeds, search, and home page, but not admin areas
   if( (is_home() || is_feed() || is_search() || ( is_archive() && !is_category() )) && !is_admin()) {
@@ -260,3 +271,20 @@ function remove_my_categories( $wp_query ) {
 }
  
 add_action('pre_get_posts', 'remove_my_categories' );
+
+function pagination_bar() {
+    global $wp_query;
+ 
+    $total_pages = $wp_query->max_num_pages;
+ 
+    if ($total_pages > 1){
+        $current_page = max(1, get_query_var('paged'));
+ 
+        echo paginate_links(array(
+            'base' => get_pagenum_link(1) . '%_%',
+            'format' => '/page/%#%',
+            'current' => $current_page,
+            'total' => $total_pages,
+        ));
+    }
+}

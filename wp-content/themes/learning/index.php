@@ -1,7 +1,7 @@
 <?php get_header(); ?>
-<div class="site-content clearfix">
+<div class="container">
 	<!-- main-column-->
-	<div class="main-column">
+	<div class="row main-column">
 		<?php
 
 			if ( have_posts() ) : while ( have_posts() ) : the_post(); 
@@ -10,14 +10,18 @@
 			
 
 			endwhile;?>
+			<nav class="col s12 m4 offset-m4 pagination center">
+				<?php pagination_bar(); ?>
+			</nav>
 
-<?php
+		<?php
 			else:
 		?>
 			<p><?php _e('Sorry, no posts matched your criteria.'); ?></p>
+
+
 		<?php endif; ?>
 	</div> <!-- /main-column-->
 	<?php  get_sidebar(); ?>
-</div><!-- site-content -->
-
+</div>
 <?php get_footer(); ?>

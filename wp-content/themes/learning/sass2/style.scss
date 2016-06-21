@@ -5,7 +5,25 @@
  *
  * Made By MaterializeCSS.com
  */
+$navy: #2C3E50;
+$reddish: #E74C3C;
 
+
+$d-blue: #225378;
+$teal: #1695A3;
+
+$blue: #69a2d1;
+$surf: #93d7f1;
+/* #f3ffe2 */
+$lt-neutral: #f3ffe2;
+$orange: #e5935c;
+$ltgrey:  #dee0dd;
+$grey:   #ada3a3;
+
+
+body {
+  background-color: $lt-neutral;
+}
 
 .logo-main {
   margin-top: 100px;
@@ -39,14 +57,11 @@ p {
 width: 80%;
 }
 .splash {
+  opacity: 0.65;
   width: 100%;
   height: auto;
 }
 
-
-.brand-logo img.responsive-img{
-  margin: 5px 20px 0 20px;
-}
 .appear {
   animation-name: appear;
 }
@@ -55,10 +70,14 @@ width: 80%;
 
 
 @import "partial/nav";
-@import "partial/buttons";
+@import "partial/header";
+
 @import "partial/layout";
 @import "partial/footer";
 @import "partial/widget";
+@import "partial/typography";
+@import "partial/buttons";
+@import "partial/media-queries";
 
 @keyframes appear {
     0% {
@@ -75,54 +94,13 @@ width: 80%;
     }
 }
 
-@media only screen and (max-width : 992px) {
-#crop {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
- 
-}
-  .hero-absolute {
-  position: absolute;
-  z-index: -100;
-  min-width: 150%;
-  min-height: auto;
-}
-
-}
-
-@media only screen and (max-width : 600px) {
-#crop {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
- 
-}
-  .hero-absolute {
-  position: absolute;
-  z-index: -100;
-  min-width: 220%;
-  min-height: auto;
-transform: translate(-25%);
-
-}
-.service-widget {
-  margin-top: 5%;
-
-}
-  #index-banner .section {
-    top: 0;
-  }
-}
-
 .icon-block {
   padding: 0 15px;
 }
 .icon-block .material-icons {
   font-size: inherit;
 }
+
 
 
 
@@ -151,7 +129,7 @@ transform: translate(-25%);
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
     animation-name: title;
-    animation-duration: 3s;
+    animation-duration: 1s;
 }
 
 @keyframes titleCopy {
@@ -170,7 +148,7 @@ transform: translate(-25%);
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
     animation-name: titleCopy;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 
@@ -181,7 +159,7 @@ transform: translate(-25%);
 
     }
     to {
-      opacity: 1;
+      opacity: 0.65;
         transform: translate(0px, 0px);
     }
 }
@@ -218,4 +196,13 @@ transform: translate(-25%);
 -moz-animation-duration: 2s;
 -o-animation-duration: 2s;
 animation-duration: 2s;
+}
+
+hr {
+    background-color: white !important;
+    
+    height: 2px !important;
+  max-width: 200px;
+  color: white;
+
 }

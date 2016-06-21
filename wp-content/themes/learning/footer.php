@@ -1,4 +1,4 @@
-</div> <!-- container closed -->
+
 	<footer class="page-footer">
 		<!-- footer-widgets -->
 		<div class="row">
@@ -32,8 +32,9 @@
 				$args = array('theme_location' => 'footer');
 			?>
 			<?php wp_nav_menu( $args ); ?>
+			<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y'); ?></p>
 		</nav>
-		<p><?php bloginfo('name'); ?> - &copy; <?php echo date('Y'); ?></p>
+
 	</footer>
 	
 
@@ -53,34 +54,32 @@
 $(document).ready(function() {
 
   // place this within dom ready function
-	function titleLogo() {     
-		$('.title-logo').addClass('title-fade showing');
+  function title() {     
+    $('hr').addClass('title-fade showing');
+  }  
+	function titleH4() {     
+		$('h4.header').addClass('title-fade showing');
 	}
-	function titleCopy() {     
-		$('.title-copy').addClass('title-fade2 showing');
+	function titleH1() {     
+		$('h1.header').addClass('title-fade2 showing');
 	}
 	function titleBtn() {     
 	    $('.call-btn').addClass('showing magictime puffIn');
 	}
+    function serve() {     
+      $('#99').addClass('showing title-fade');
+  }
  // use setTimeout() to execute
- setTimeout(titleLogo, 200);
- setTimeout(titleCopy, 500);
- setTimeout(titleBtn, 1000);
+  setTimeout(title, 200);
 
+ setTimeout(titleH1, 200);
+ setTimeout(titleH4, 500);
+ setTimeout(titleBtn, 700);
+//setTimeout(serve, 700);
 
 });
 
-
   var options = [
-    {selector: '#staggered-test', offset: 50, callback: function() {
-      Materialize.toast("This is our ScrollFire Demo!", 1500 );
-    } },
-    {selector: '#staggered-test', offset: 205, callback: function() {
-      Materialize.toast("Please continue scrolling!", 1500 );
-    } },
-    {selector: '#staggered-test', offset: 400, callback: function() {
-      Materialize.showStaggeredList("#staggered-test");
-    } },
     {selector: '.service-widget', offset: 0, callback: function() {
       $('.service-widget').addClass('hiding');
     } },
@@ -104,13 +103,12 @@ $(document).ready(function() {
     } },
     {selector: '.splash', offset: 200, callback: function() {
       $('.splash').addClass('title-fade3 showing');
-    } }   
+    } }        
   ];
   Materialize.scrollFire(options);
 
 
-
-
 </script>
+
 </body>
 </html>

@@ -1,0 +1,54 @@
+html {
+	color:darken($blue, 23%);
+}
+
+h1.header {
+	margin-top: 10px;
+}
+h4.header {
+	margin-top: 15px;
+	margin-bottom: 70px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	font-family: 'Merriweather', sans-serif;
+}
+
+.title-copy {
+	margin-top: 10%;
+}
+
+a {
+  color: lighten($blue, 15%);
+}
+
+.service-widget a {
+	color: $lt-neutral;
+}
+
+.front-copy-title{
+	background-color: darken($surf, 15%);
+}
+
+.front-copy h2 {
+	color: darken($blue, 23%);
+}
+
+article.post h2 a {
+
+  color: darken($blue, 23%);
+}
+
+.post-info a {
+  color: lighten($blue, 15%);
+}
+
+.action-title h2 a {
+  color: darken($blue, 23%);
+}

@@ -1,9 +1,33 @@
 .widgettitle {
-  padding: 20px;
-  color: white;
+  color: $lt-neutral;
 }
 
-.widget ul li a{
 
-  color: white;
+.widget ul li a{
+  color: $lt-neutral;
+}
+
+li.widget{
+list-style: none
+}
+
+.widget-item {
+	padding: 10px;
+	background-color: darken($blue, 20%); 
+	color: $lt-neutral;
+}
+.widget-item a {
+	
+	color: $lt-neutral;
+}
+
+.action-widget {
+	background-color: darken($surf, 20%);
+}
+
+
+
+.newsletter {
+	height: 50%;
+	background: darken($orange, 10%);
 }

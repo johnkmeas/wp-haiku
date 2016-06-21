@@ -1,23 +1,25 @@
 .front-area {
 	margin-top: 5%;
   width: 100%;
-  	margin-bottom: 10%; 
-
+  margin-bottom: 10%; 
+  background-color: $lt-neutral;
   }
 
  .front-copy-title {
- 	padding-top: 5%;
+  padding: 20px;
+
  }
+
+.front-copy {
+  background-color: $surf;
+}
 
 .front-pg {
   width: 80%; }
 
 .service-area {
-	margin-top: 5%;
-}
 
-.page-id-14 {
-	background: none;
+	margin-top: 5%;
 }
 
 input#s {
@@ -30,3 +32,34 @@ input#s {
 .results {
 	margin-top: 5%;
 }
+
+
+
+.service-container {
+  border: solid $blue 3px;
+  border-radius: 10px;
+  background-color: lighten($surf, 10%);
+}
+
+article.post {
+  margin: 50px 0;
+}
+
+dl.gallery-item {
+  width: 100%;
+}
+
+.action-img img {
+  width: 25%;
+  height: auto;
+  padding: 10px;
+
+  
+}
+
+.action-title{
+  background-color: #f5e596;
+
+  height: auto;
+}
+

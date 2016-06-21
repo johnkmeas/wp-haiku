@@ -1,13 +1,26 @@
 nav ul a,
 nav .brand-logo {
-  color: #444;
-  max-width: 25%;
+  max-width: 200px;
+   margin: 10px 20px 0 20px;
+
 }
+
 
 .nav-wrapper {
-  background-color: #202020;
+	  background-color: darken($blue, 46%);
+}
+.nav-color {
+	  background-color: #202020;
+}
+nav ul a, nav a{
+	color: $lt-neutral;
 }
 
-nav ul a {
-	color: white;
+i {
+	color: $lt-neutral;
 }
+
+#mobile-demo{
+	background-color: $lt-neutral;
+}
+

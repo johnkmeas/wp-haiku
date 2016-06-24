@@ -73,8 +73,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				</div>
 				<div class="action-widget center responsive-img col s12 m12">
 	
-					<div class="center">
-					<?php the_content();?>
+					<div class="center col s10 offset-s1 m8 offset-m2">
+					<?php the_content();?> 
 					</div>
 					<div class="action-img col s12">
 						<?php the_post_thumbnail('action-thumbnail'); ?>

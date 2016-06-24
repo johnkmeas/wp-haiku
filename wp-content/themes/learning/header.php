@@ -17,7 +17,7 @@
 	<div class="navbar-fixed">
 	  <nav>
 	    <div class="nav-wrapper z-depth-3">
-	      <a href="http://localhost/wordpress.haiku" class="brand-logo"><img src='<?php echo esc_url( get_theme_mod( 'learning_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="logo-header responsive-img" id="image-test"></a>
+	      <a href="https://digitalstencilca.ipage.com/wordpress.haiku" class="brand-logo"><img src='<?php echo esc_url( get_theme_mod( 'learning_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' class="logo-header responsive-img" id="image-test"></a>
 	      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 	      <ul class="right hide-on-med-and-down">
 	  			<?php 

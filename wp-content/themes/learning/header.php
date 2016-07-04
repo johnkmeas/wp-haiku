@@ -27,9 +27,10 @@
 	      </ul>
 	      <ul class="side-nav" id="mobile-demo">
 				<?php 
-					$args = array('theme_location' => 'primary');
+					$args = array('theme_location' => 'mobile');
 				?>
 				<?php wp_nav_menu( $args ); ?>
+
 	      </ul>
 	    </div>
 	  </nav>

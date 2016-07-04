@@ -1,19 +1,32 @@
 nav ul a,
 nav .brand-logo {
   max-width: 200px;
-   margin: 10px 20px 0 20px;
+  margin: 10px 20px 0 20px;
 
 }
 
+.logo-header {
+	padding-top: 9px;
+	padding-left: 10px;
+}
 
 .nav-wrapper {
-	  background-color: darken($blue, 46%);
+	background: darken($m-grn, 20%);
 }
+
+#menu-primary-menu-links.menu {
+	margin-bottom: -7px;	
+}
+
 .nav-color {
 	  background-color: #202020;
 }
-nav ul a, nav a{
+nav ul a{
+	font-size: 1.3em;
 	color: $lt-neutral;
+}
+nav ul a:hover{
+	background-color: transparent;
 }
 
 i {
@@ -21,6 +34,47 @@ i {
 }
 
 #mobile-demo{
-	background-color: $lt-neutral;
+	background-color: $org;
 }
 
+
+ul.sub-menu li a{
+	color: $lt-yw;
+}
+
+ul.sub-menu li:hover{
+	background: $org;
+}
+
+ul.sub-menu {
+	position: absolute;
+    overflow:hidden;
+    height:0;
+    top: 100%;
+}
+.menu ul {
+	-webkit-box-shadow: 0px 10px 45px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 10px 45px -4px rgba(0,0,0,0.75);
+	box-shadow: 0px 10px 45px -4px rgba(0,0,0,0.75);
+	position: absolute;
+}
+
+
+.menu ul li {
+    clear: left;
+    width: 260px;
+    background-color: darken($m-grn, 10%);
+    border: 1px solid darken($m-grn, 25%);
+    
+}
+
+.menu li:hover > ul {
+transition: 300ms ease-in;
+	display: block;
+	color: $org;
+	height: 231px;
+}
+
+.menu #menu-item-20:hover > ul {
+	height: 154px;	
+}

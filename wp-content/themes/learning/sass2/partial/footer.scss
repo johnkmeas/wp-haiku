@@ -1,7 +1,11 @@
 footer.page-footer {
-	background: darken($blue, 30%);
+	background: darken($m-grn, 20%);
 }
 
 footer.widget-title {
 	color: $lt-neutral;
+}
+
+footer p {
+	color: $lt-yw;
 }

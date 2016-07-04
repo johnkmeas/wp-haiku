@@ -7,10 +7,10 @@
         <div class="row center">
           <div class="title-copy hiding">
 	          <h1 class="header col s12">Web Design and Development</h1>
-	          <hr>
+	          
 	          <h4 class="header col s12">Introductary Launch special offer</h4>
 	      </div>
-	          <a href="#portfolio" id="download-button" class="call-btn btn-large waves-effect waves-light z-depth-3">Learn More+</a>
+	          <a href="services" id="download-button" class="call-btn btn-large waves-effect waves-light center z-depth-3">Learn More+</a>
         </div>
         <br><br>
 	</div>
@@ -31,8 +31,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				while ($newsPosts -> have_posts() ) : 
 				$newsPosts -> the_post();  ?>
 					<div class="service-widget center responsive-img col s12 m4">	
-						<h4 class="center"><a href="services"><?php the_title(); ?></a></h4>
-						<?php the_post_thumbnail('icon-thumbnail'); ?>
+						<a class="service-icon__hover" href="services"><?php the_post_thumbnail('icon-thumbnail'); ?>
+						<h4 class="center"><?php the_title(); ?></h4></a>
 						<div class="center">
 						<?php the_excerpt();?>
 						</div>

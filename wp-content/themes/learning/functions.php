@@ -60,6 +60,7 @@ function learningWordpress_setup(){
 	register_nav_menus(array(
 		'primary' => __('Primary Menu'),
 		'footer' => __('Footer Menu'),
+		'mobile' => __('Mobile Menu')
 		));
 
 // Add featured image support
@@ -68,7 +69,7 @@ function learningWordpress_setup(){
 	add_image_size('icon-thumbnail', 200, 200, true);
 	add_image_size('action-thumbnail', 300, 200, true);
 	add_image_size('banner-image', 920, 210, array('left', 'top'));
-	add_image_size('splash-image', 920, 700, array('left', 'top'));
+	add_image_size('splash-image', 920, 540, array('left', 'top'));
 
 //Add Post format support
 	add_theme_support('post-formats', array('aside', 'gallery', 'link'));
@@ -119,7 +120,7 @@ add_action('widgets_init', 'ourWidgetInit');
 function customizerTheme( $wp_customize) {
 	
 	$wp_customize->add_setting('link_color', array(
-			'default' => '#2CA0DB',
+			'default' => '#F3FFE2',
 			'transport' => 'refresh',
 	));
 	$wp_customize->add_setting('btn_color', array(
@@ -131,7 +132,7 @@ function customizerTheme( $wp_customize) {
 			'transport' => 'refresh',
 	));	
 	$wp_customize->add_setting('body_color', array(
-			'default' => '#FCFCFC',
+			'default' => '#F7F9CB',
 			'transport' => 'refresh',
 	));				
 
@@ -167,10 +168,11 @@ add_action('customize_register', 'customizerTheme' );
 // Output Customize CSS 
 function customizerCSScolor() { ?>
 	<style type="text/css">
-		a:link,
-		a:visited {
+		nav ul a:link,
+		nav ul a:visited {
 			color: <?php echo get_theme_mod( 'link_color'); ?>;
 		}
+
 		nav ul li a:hover {
 			background-color: <?php echo get_theme_mod( 'btn_color'); ?>;
 		}
@@ -187,9 +189,11 @@ function customizerCSScolor() { ?>
 	  		width: 100%;
 	  		background-color: <?php echo get_theme_mod( 'nav_color'); ?>; 
 	  	}
+
 	  	body {
 	  		background-color: <?php echo get_theme_mod( 'body_color'); ?>;
 	  	}
+
 	</style>
 <?php }
 

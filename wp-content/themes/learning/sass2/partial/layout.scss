@@ -2,16 +2,17 @@
 	margin-top: 5%;
   width: 100%;
   margin-bottom: 10%; 
-  background-color: $lt-neutral;
+  background-color: darken($lt-yw, 3%);
   }
 
- .front-copy-title {
+.front-copy-title{
   padding: 20px;
-
- }
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
 
 .front-copy {
-  background-color: $surf;
+  margin-top: 2%;
 }
 
 .front-pg {
@@ -36,9 +37,10 @@ input#s {
 
 
 .service-container {
-  border: solid $blue 3px;
+  border: solid $m-grn 4px;
+  background: lighten($lt-yw, 3%);
   border-radius: 10px;
-  background-color: lighten($surf, 10%);
+
 }
 
 article.post {
@@ -58,8 +60,11 @@ dl.gallery-item {
 }
 
 .action-title{
-  background-color: #f5e596;
+  background-color: $m-grn;
 
   height: auto;
 }
 
+img.hero-absolute {
+  filter: brightness(0.01);
+}

@@ -14,14 +14,23 @@ get_header(); ?>
 			while ($reviewPosts -> have_posts() ) : 
 			$reviewPosts -> the_post();  ?>
 			<div class="row col s12 service-container" id="<?php the_ID(); ?>">
-				<h2 class="center"><?php the_title(); ?></h2>
+				
 				 
 				<div class="title-fade3 responsive-img center icon col s12 m2">
 					<?php the_post_thumbnail('icon-thumbnail'); ?>
 					
 				</div>
+				<h2 class=" col m8 offset-m2"><?php the_title(); ?></h2>
 				<div class="col s12 m7 offset-m3 l8 offset-l2" >
 					<?php the_content();?>
+
+
+
+					<a href="<?php echo strtolower(str_replace(' ', '-', get_the_title())); ?>" class="service-button waves-effect waves-light btn">
+						<small>Learn more > </small>
+<?php the_title( '<strong>', '</strong>' ); ?>
+</a>
+
 				</div>
 			</div>
 			<?php endwhile; 

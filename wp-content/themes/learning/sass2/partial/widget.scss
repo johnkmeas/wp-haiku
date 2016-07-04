@@ -1,10 +1,16 @@
-.widgettitle {
-  color: $lt-neutral;
+a.service-icon__hover img{ 
+	transition: all .2s ease-in-out; 
+	opacity: 0.6;
 }
 
+a.service-icon__hover:hover > img { 
+	transform: scale(1.05); 
+	opacity: 1;
 
-.widget ul li a{
-  color: $lt-neutral;
+}
+
+.widgettitle, .widget ul li a{
+  color: $lt-yw;
 }
 
 li.widget{
@@ -13,21 +19,20 @@ list-style: none
 
 .widget-item {
 	padding: 10px;
-	background-color: darken($blue, 20%); 
-	color: $lt-neutral;
+	background-color: $lt-grn; 
+	color: $blue;
 }
 .widget-item a {
-	
-	color: $lt-neutral;
+	display:inline-block;
+	padding: 12px;
+	color: $blue;
 }
 
 .action-widget {
-	background-color: darken($surf, 20%);
+	background-color: $m-grn;
 }
-
-
 
 .newsletter {
 	height: 50%;
-	background: darken($orange, 10%);
+	background: lighten($org, 10%);
 }

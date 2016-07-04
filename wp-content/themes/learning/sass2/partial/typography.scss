@@ -1,5 +1,5 @@
 html {
-	color:darken($blue, 23%);
+	color: $blue;
 }
 
 h1.header {
@@ -30,31 +30,28 @@ p {
 	margin-top: 10%;
 }
 
-a {
-  color: lighten($blue, 15%);
+h1.header, h4.header, hr{
+	color: lighten($lt-yw, 5%);
 }
 
-.service-widget a {
-	color: $lt-neutral;
+
+
+p, .service-widget a, .front-copy h2, article.post h2 a, .action-title h2 a  {
+	color: $blue;
 }
 
-.front-copy-title{
-	background-color: darken($surf, 15%);
+.post-info {
+	color: $m-grn;
 }
 
-.front-copy h2 {
-	color: darken($blue, 23%);
+a, .post-info a {
+  color: $lt-grn;
 }
 
-article.post h2 a {
-
-  color: darken($blue, 23%);
+small {
+	font-size: 85%;
 }
 
-.post-info a {
-  color: lighten($blue, 15%);
-}
-
-.action-title h2 a {
-  color: darken($blue, 23%);
+.contact-links {
+	margin-top: 50px;
 }

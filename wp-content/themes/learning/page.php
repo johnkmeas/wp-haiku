@@ -10,7 +10,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article class="post page">
 	<?php
 		if ( has_children() OR $post->post_parent > 0 ) { ?>
-      
+      <?php the_content(); ?>
 	 <ul id="dropdown2" class="dropdown-content">	
 		<li><a class="about-link" href="<?php echo get_the_permalink(get_top_ancestor_id()); ?>"><?php echo get_the_title(get_top_ancestor_id());?></a></li>
 
@@ -29,8 +29,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
      
   
 	<?php } ?>
-
-	<?php the_content(); ?>
 
 </article><!-- container -->
 

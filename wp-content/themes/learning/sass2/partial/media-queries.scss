@@ -2,6 +2,16 @@
 	.front-copy {
 	margin-top: -10%
 	}
+	ul.sub-menu {
+		margin-top: 100px;
+	}
+
+	#mobile-demo ul.sub-menu {
+		display: block;
+		overflow: visible;
+		top: -100px;
+		background-color: orange;
+	}
 }
 
 
@@ -70,7 +80,6 @@ h5 {
   .hero-absolute {
   position: absolute;
   z-index: -100;
-  min-width: 150%;
   min-height: auto;
 }
 

@@ -20,9 +20,18 @@ $orange: #e5935c;
 $ltgrey:  #dee0dd;
 $grey:   #ada3a3;
 
+$m-grn: #8bbdaf;
+$lt-grn: #b0d1b4;
+$d-grn: #829c93;
+$lt-yw: #f7f9cb;
+$d-yw: #e6dba6;
+$org: #e4c06b;
+$red: #caa26f;
+$blue: #515d71;
+
 
 body {
-  background-color: $lt-neutral;
+  background-color: $lt-yw;
 }
 
 .logo-main {
@@ -42,10 +51,6 @@ body {
   position: absolute;
   z-index: -100;
   min-width: 100%;
-}
-
-.front-copy {
-  margin-top: 10%;
 }
 
 .front-area {

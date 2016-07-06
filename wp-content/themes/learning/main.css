@@ -56,7 +56,8 @@ nav .brand-logo {
   background-color: #202020; }
 
 nav ul a {
-  font-size: 1.3em;
+  font-size: 1.2em;
+  font-weight: 300;
   color: #f3ffe2; }
 
 nav ul a:hover {
@@ -105,18 +106,26 @@ h1.header, h4.header {
   color: #f9fff1; }
 
 .front-area {
-  margin-top: 5%;
   width: 100%;
-  margin-bottom: 10%;
+  padding: 10% 0;
   background-color: #f5f7bd; }
 
 .front-copy-title {
-  padding: 20px;
-  margin-top: 4%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-bottom: 2%; }
 
 .front-copy {
-  margin-top: 2%; }
+  background: #fbfce2;
+  margin-top: 5%;
+  padding-bottom: 100px; }
+
+.front-copy-bottom {
+  background: #8bbdaf;
+  padding: 10% 0; }
+
+.row.front-copy-bottom, .row.front-area, .row.front-copy {
+  margin-bottom: 0; }
 
 .front-pg {
   width: 80%; }
@@ -134,9 +143,11 @@ input#s {
   margin-top: 5%; }
 
 .service-container {
-  border: solid #8bbdaf 4px;
   background: #f9fbd9;
-  border-radius: 10px; }
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 8px 37px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 8px 37px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 8px 37px -10px rgba(0, 0, 0, 0.75); }
 
 article.post {
   margin: 50px 0; }
@@ -149,12 +160,17 @@ dl.gallery-item {
   height: auto;
   padding: 10px; }
 
-.action-title {
-  background-color: #8bbdaf;
-  height: auto; }
-
 img.hero-absolute {
   filter: brightness(0.01); }
+
+img.attachment-banner-image {
+  margin: 0 auto;
+  width: 100%; }
+
+img.attachment-small-thumbnail {
+  margin-top: 30px;
+  width: 100%;
+  height: auto; }
 
 footer.page-footer {
   background: #52907f; }
@@ -166,12 +182,15 @@ footer p {
   color: #f7f9cb; }
 
 a.service-icon__hover img {
+  background: #e6dba6;
   transition: all .2s ease-in-out;
-  opacity: 0.6; }
+  opacity: 0.6;
+  border-radius: 50%; }
 
 a.service-icon__hover:hover > img {
   transform: scale(1.05);
-  opacity: 1; }
+  opacity: 1;
+  box-shadow: 0px 8px 37px -10px rgba(0, 0, 0, 0.75); }
 
 .widgettitle, .widget ul li a {
   color: #f7f9cb; }
@@ -188,9 +207,6 @@ li.widget {
   display: inline-block;
   padding: 12px;
   color: #515d71; }
-
-.action-widget {
-  background-color: #8bbdaf; }
 
 .newsletter {
   height: 50%;
@@ -212,7 +228,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Merriweather', sans-serif; }
+  font-family: 'oswald', sans-serif; }
 
 p {
   font-size: 1.2em;
@@ -228,7 +244,8 @@ p, .service-widget a, .front-copy h2, article.post h2 a, .action-title h2 a {
   color: #515d71; }
 
 .post-info {
-  color: #8bbdaf; }
+  color: #8bbdaf;
+  margin-bottom: -20px; }
 
 a, .post-info a {
   color: #b0d1b4; }

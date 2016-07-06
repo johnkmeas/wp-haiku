@@ -1,18 +1,28 @@
 .front-area {
-	margin-top: 5%;
   width: 100%;
-  margin-bottom: 10%; 
+  padding: 10% 0; 
   background-color: darken($lt-yw, 3%);
   }
 
 .front-copy-title{
-  padding: 20px;
-  margin-top: 4%;
+  padding-top: 5%;
+  padding-bottom: 5%;
   margin-bottom: 2%;
 }
 
 .front-copy {
-  margin-top: 2%;
+  background: lighten($lt-yw, 5%);
+  margin-top: 5%;
+  padding-bottom: 100px;
+}
+
+.front-copy-bottom {
+  background: $m-grn;
+  padding: 10% 0; 
+}
+
+.row.front-copy-bottom, .row.front-area, .row.front-copy  {
+  margin-bottom: 0;
 }
 
 .front-pg {
@@ -34,13 +44,12 @@ input#s {
 	margin-top: 5%;
 }
 
-
-
 .service-container {
-  border: solid $m-grn 4px;
   background: lighten($lt-yw, 3%);
   border-radius: 10px;
-
+-webkit-box-shadow: 0px 8px 37px -10px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 8px 37px -10px rgba(0,0,0,0.75);
+box-shadow: 0px 8px 37px -10px rgba(0,0,0,0.75);
 }
 
 article.post {
@@ -59,12 +68,17 @@ dl.gallery-item {
   
 }
 
-.action-title{
-  background-color: $m-grn;
-
-  height: auto;
-}
-
 img.hero-absolute {
   filter: brightness(0.01);
+}
+
+img.attachment-banner-image {
+  margin: 0 auto;
+  width: 100%;
+}
+
+img.attachment-small-thumbnail {
+  margin-top: 30px;
+  width: 100%;
+  height: auto;
 }

@@ -1,11 +1,15 @@
 a.service-icon__hover img{ 
+	background: $d-yw;
 	transition: all .2s ease-in-out; 
 	opacity: 0.6;
+	border-radius: 50%;
+	
 }
 
 a.service-icon__hover:hover > img { 
 	transform: scale(1.05); 
 	opacity: 1;
+  	box-shadow: 0px 8px 37px -10px rgba(0,0,0,0.75);
 
 }
 
@@ -29,7 +33,7 @@ list-style: none
 }
 
 .action-widget {
-	background-color: $m-grn;
+
 }
 
 .newsletter {

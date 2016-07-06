@@ -2,9 +2,8 @@
 
 function learning_resources() {
 	//https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet
-
 	wp_enqueue_style( 'icons', '//fonts.googleapis.com/icon?family=Material+Icons', array(), '4.0.3' );
-	wp_enqueue_style( 'merri-font', 'https://fonts.googleapis.com/css?family=Merriweather' );
+	wp_enqueue_style( 'oswald-font', 'https://fonts.googleapis.com/css?family=Oswald' );
 	wp_enqueue_style( 'iconsa', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', array(), '4.0.3' );
 	//wp_enqueue_style('style', get_stylesheet_uri());
 	wp_enqueue_style( 'style', 
@@ -65,11 +64,11 @@ function learningWordpress_setup(){
 
 // Add featured image support
 	add_theme_support('post-thumbnails');
-	add_image_size('small-thumbnail', 180, 120, true);
+	add_image_size('small-thumbnail', 320, 320, true);
 	add_image_size('icon-thumbnail', 200, 200, true);
 	add_image_size('action-thumbnail', 300, 200, true);
-	add_image_size('banner-image', 920, 210, array('left', 'top'));
-	add_image_size('splash-image', 920, 540, array('left', 'top'));
+	add_image_size('banner-image', 960, 320, array('left', 'top'));
+	add_image_size('splash-image', 960, 540, array('left', 'top'));
 
 //Add Post format support
 	add_theme_support('post-formats', array('aside', 'gallery', 'link'));

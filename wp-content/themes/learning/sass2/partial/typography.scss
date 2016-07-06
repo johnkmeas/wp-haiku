@@ -17,7 +17,7 @@ h4,
 h5,
 h6
 {
-	font-family: 'Merriweather', sans-serif;
+	font-family: 'oswald', sans-serif;
 }
 
 p {
@@ -42,6 +42,7 @@ p, .service-widget a, .front-copy h2, article.post h2 a, .action-title h2 a  {
 
 .post-info {
 	color: $m-grn;
+	margin-bottom: -20px;
 }
 
 a, .post-info a {

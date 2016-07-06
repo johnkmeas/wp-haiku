@@ -6,9 +6,9 @@
        <br><br>
         <div class="row center">
           <div class="title-copy hiding">
-	          <h1 class="header col s12">Web Design and Development</h1>
+	          <h1 class="header col s12"><?php the_field('main_heading'); ?></h1>
 	          
-	          <h4 class="header col s12">Introductary Launch special offer</h4>
+	          <h4 class="header col s12"><?php the_field('sub_heading'); ?></h4>
 	      </div>
 	          <a href="services" id="download-button" class="call-btn btn-large waves-effect waves-light center z-depth-3">Learn More+</a>
         </div>
